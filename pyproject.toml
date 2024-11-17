@@ -8,7 +8,7 @@ dynamic = ["version"]
 description = "LLM framework to build customizable, production-ready LLM applications. Connect components (models, vector DBs, file converters) to pipelines or agents that can interact with your data."
 readme = "README.md"
 license = "Apache-2.0"
-requires-python = ">=3.8"
+requires-python = ">=3.8,<3.13"
 authors = [{ name = "deepset.ai", email = "malte.pietsch@deepset.ai" }]
 keywords = [
   "BERT",
@@ -81,7 +81,7 @@ format-check = "ruff format --check {args}"
 
 [tool.hatch.envs.test]
 extra-dependencies = [
-  "numpy>=2",                                  # Haystack is compatible both with numpy 1.x and 2.x, but we test with 2.x
+  "numpy>=2", # Haystack is compatible both with numpy 1.x and 2.x, but we test with 2.x
 
   "transformers[torch,sentencepiece]==4.44.2", # ExtractiveReader, TransformersSimilarityRanker, LocalWhisperTranscriber, HFGenerators...
   "huggingface_hub>=0.23.0",                   # Hugging Face API Generators and Embedders
@@ -118,7 +118,7 @@ extra-dependencies = [
 
   # Tracing
   "opentelemetry-sdk",
-  "ddtrace==2.15.0rc2",
+  "ddtrace",
 
   # Structured logging
   "structlog",
