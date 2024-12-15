@@ -46,7 +46,7 @@ dependencies = [
   "tqdm",
   "tenacity!=8.4.0",
   "lazy-imports",
-  "openai>=1.1.0",
+  "openai>=1.56.1",
   "Jinja2",
   "posthog",                # telemetry
   "pyyaml",
@@ -242,6 +242,7 @@ max-locals = 45         # Default is 15
 max-module-lines = 2468 # Default is 1000
 max-nested-blocks = 9   # Default is 5
 max-statements = 206    # Default is 50
+
 [tool.pylint.'SIMILARITIES']
 min-similarity-lines = 6
 
